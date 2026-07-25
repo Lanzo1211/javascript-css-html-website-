@@ -3,51 +3,14 @@
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
 }
-.container{
-width:100% ;
-height: 100vh;
-background-color: rgba(0,0,0,0.4);
-display: flex;
-align-items: center;
-justify-content: center;
-}
-body{ 
-    height: 100vh;
-    background: black;
+body {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.background-clip{
-    position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-.content{
-    text-align: center;
-}
-.content h1{
-    font-size: 90px;
-    color: rgb(127, 163, 179);
-    margin-bottom: 50px;
-}
-.content a{
-    font-size: 24px;
-    color: rgb(177, 193, 255);
-    text-decoration: none;
-    border: 2px solid rgb(236, 236, 236);
-    padding: 14px 25px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-.content a:hover{
-    background-color:rgb(154, 248, 255) ;
-    color: rgb(43, 105, 197);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 .spot-light {
     z-index:   999;
@@ -88,6 +51,7 @@ border-radius: 50%;
     .background-clip{
      width: 100%;
      height: auto;
+     background-position: center;
     }
 }
 @media(max-aspect-ratio:16/9){
@@ -102,14 +66,67 @@ header{
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
 }
-.logo{
+.Logo{
     font-size: 2em;
-    color: aqua;
+    color: rgb(253, 254, 255);
     user-select: none;
+    font-style: italic;
+
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: white;
+    border-radius:5px; 
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s;
+}
+.navigation a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navigation .button{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size:1.1em;
+    color:white ;
+    font-weight: 500;
+    margin-left: 40px ;
+    transition: .5s;
+}
+.navigation .button:hover{
+    background: aliceblue;
+    color: rgb(42, 42, 56);
+}
+.videoo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; 
 }
