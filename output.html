@@ -17,27 +17,42 @@
     </header>
 
     <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon>
+        </span>
      <div class="form-box">
         <h2>Login</h2>
         <form action ="#">
             <div class="input-box">
-                <span class="icon"></span>
-                <input type="email" required>
-                <label>Email</label>
+                <span class="icon">
+                <ion-icon name="mail"></ion-icon></span>
+                <input type="email" placeholder="" required>
+            <label>Email</label>
             </div>
              <div class="input-box">
-                <span class="icon"></span>
-                <input type="password" required>
+                <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" placeholder="" required>
                 <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label ><input type="checkbox">Remember me</label>
+                <a href="#" class="passwordd">Forget Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class = "login-register">
+                <p>Dont have an account?
+                    <a href="#" class="register-link">Register</a></p>
             </div>
         </form>
     </div>
     </div>
 <div class= "spot-light"></div>
- <video autoplay loop muted playsinline class="background-clip">
+ <video  autoplay loop muted playsinline class="background-clip">
         <source src="room-at-the-edge.1920x1080(1).mp4" type="video/mp4">
  </video>
 <script src="script.js"></script> 
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script> 
 
 </body>
 </html>
