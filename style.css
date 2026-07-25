@@ -1,0 +1,95 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.container{
+width:100% ;
+height: 100vh;
+background-color: rgba(0,0,0,0.4);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+body{ 
+    height: 100vh;
+    background: black;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;  
+    z-index: -1;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 90px;
+    color: rgb(127, 163, 179);
+    margin-bottom: 50px;
+}
+.content a{
+    font-size: 24px;
+    color: rgb(177, 193, 255);
+    text-decoration: none;
+    border: 2px solid rgb(236, 236, 236);
+    padding: 14px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.content a:hover{
+    background-color:rgb(154, 248, 255) ;
+    color: rgb(43, 105, 197);
+}
+.spot-light {
+    z-index:   999;
+    position: fixed;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%;
+    pointer-events: none;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(89, 135, 235),
+                0 0 60px rgb(1, 30, 110),
+                0 0 100px rgb(151, 37, 185);
+    animation: colors  5s infinite;
+    transform: translate(-50%, -50%);
+}  
+
+
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    } 
+100%{ 
+    filter: hue-rotate(360deg);
+}
+
+}
+.spot-light:before{
+content: '';
+position: absolute ;
+background: rgb(25, 0, 255);
+width: 50px;
+height: 50px;
+opacity: 0.2;
+transform: translate(-30%,-30%);
+border-radius: 50%;
+} 
+@media (min-aspect-ratio:16/9) {
+    .background-clip{
+     width: 100%;
+     height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .background-clip{
+     width: auto;
+     height: 100%;
+    }
+}
