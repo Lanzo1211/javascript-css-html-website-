@@ -103,11 +103,11 @@ header{
     transform-origin: left;
     transform: scaleX(1);
 }
-.navigation .button{
+.button{
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid rgb(197, 179, 179);
     outline: none;
     border-radius: 6px;
     cursor: pointer;
@@ -131,12 +131,12 @@ header{
     z-index: 1;
 }
 .wrapper {
+    display: flex;
     position: relative;
     top: 0;
     left: 0;
     width: 400px;
     height: 440px;
-    display: flex;
     background:transparent ;
     border: 2px solid bisque;
     border-radius: 20px;
@@ -145,17 +145,41 @@ header{
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transition: height .2s ease;
+    transform: scale(0);
+    overflow: hidden;
+    transition: transform .5 ease, height .2 ease;
+    
 }
-.wrapper .form-box {
-    width: 100%;
-    padding: 40px;
+.wrapper.active-popup{
+     transform: scale(1);
+}
+.wrapper.active {
+    height: 520px;
+}
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
 .wrapper .icon-close{
     position: absolute;
     top: 0;
     right: 0;
     width: 50px;
-    height: px;
+    height:50px;
     margin-top: 8px;
     justify-content: center;
     font-size: 2em;
@@ -224,19 +248,14 @@ header{
     margin: -15px  0 15px;
     display: flex;
     justify-content: space-between;
-
+    gap: 50px;
 }
 .remember-forgot label input{
     accent-color: aqua;
     margin-right: 3px;
 }
-.remember-forgot a{
-    color: aqua;
-    text-decoration: none;
-}
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
+
+
 .btn{
     width: 100%;
     height: 45px;
@@ -246,7 +265,7 @@ header{
     border-radius: 6px;
     cursor: pointer;
     font-size: 1em;
-    color: rgb(35, 44, 48);
+    color: rgb(56, 64, 66);
     font-weight: 500;
 }
 .login-register {
