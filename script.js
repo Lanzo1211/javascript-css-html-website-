@@ -20,8 +20,18 @@ const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 const btn = document.querySelector('.button');
-const iconClose = document.querySelector('.icon-close')
+const btnM = document.querySelector('.buttonL');
 
+const iconClose = document.querySelector('.icon-close')
+function showSidebar(){
+const sidebar = document.querySelector('.sidebar')
+sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+const sidebar = document.querySelector('.sidebar')
+sidebar.style.display = 'none'
+
+}
 registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('active'); 
 });
@@ -30,5 +40,7 @@ loginLink.addEventListener('click', ()=> {
 }); 
 btn.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup')});
+btnM.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup')});    
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup')});
