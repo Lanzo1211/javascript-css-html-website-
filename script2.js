@@ -15,7 +15,6 @@ timeout = setTimeout(mouseStopped, 1000);
 });
 document.addEventListener('mouseout',() =>{
     spotlight.style.display = "none";
-<<<<<<< HEAD
 })
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
@@ -45,6 +44,3 @@ btnM.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup')});    
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup')});
-=======
-})
->>>>>>> b36c440 (mobile)
